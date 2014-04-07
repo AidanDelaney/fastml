@@ -62,8 +62,9 @@ mainbb::mainbb(int argc, char* argv[]) {
         } else {
 			findAncestralSequencesHomJoint();		
 		}
-	}
-	getMarginalReconstruction();
+	} else {
+        getMarginalReconstruction();
+    }
 	myLog::endLog();
 }
 

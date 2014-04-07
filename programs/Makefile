@@ -8,7 +8,7 @@ PROGRAMS2= indelCoder
 PROGRAMS = $(PROGRAMS1) $(PROGRAMS2)
 
 # all has to be the FIRST task!
-TASKS= all clean test depend debug All install doubleRep
+TASKS= all clean depend debug All install doubleRep
 .PHONY: $(TASKS) $(PROGRAMS)
 
  define TASKS_template1
@@ -34,3 +34,4 @@ $(foreach prog,$(PROGRAMS),$(eval $(call PROGRAM_template,$(prog))))
 $(PROGRAMS):
 	+cd $@ && make 
 
+.PHONY: test

@@ -5,6 +5,7 @@
 #include <iostream>
 #include <string>
 #include <iomanip>
+#include <cstdlib>
 using namespace std;
 
 #include "logFile.h"

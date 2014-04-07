@@ -35,10 +35,10 @@ int main(int argc,char*argv[]) {
 	//const MDOUBLE myToll = 0.0001;
 	
 	cout<<"computing the NJ tree..."<<endl;
-	jcDistance likeDist1(myAlph.size());
+	jcDistanceOLD likeDist1(myAlph.size());
 	VVdouble disTab;
 	vector<string> vNames;
-	giveDistanceTable(&likeDist1,
+	giveDistanceTable((const distanceMethod *) &likeDist1,
 						original,
 						disTab,
 						vNames);

@@ -143,6 +143,9 @@ string bb_options::modelNameStr() const
 	case nucjc:
 		res = "NUC_JC";
 		break;
+	case nucgtr:
+		res = "NUC_GTR";
+		break;
 	case aajc:
 		res = "AA_JC";
 		break;

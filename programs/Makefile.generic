@@ -4,8 +4,9 @@
 DEBUGEXEC = $(EXEC:=.debug)
 
 
-#TEST_EXEC_SUB = 
-TEST_EXEC = $(addprefix tests/,$(TEST_EXEC_SUB))
+#TEST_EXEC_SUB =
+# There are no tests associated with the FastML programs
+#TEST_EXEC = $(addprefix tests/,$(TEST_EXEC_SUB))
 
 ifdef LIBNAME
   ifneq ($(LIBNAME),"")
@@ -60,7 +61,7 @@ LDFLAGSDEBUG := $(LDFLAGS) -g
 # sources
 sources= $(Libsources) $(LibCsources) $(addsuffix .cpp,$(EXEC) $(TEST_EXEC))
 
-.PHONY: tests lib test debug %.debug DOUBLEREP doubleRep
+.PHONY: lib test debug %.debug DOUBLEREP doubleRep
 
 ifdef DOUBLEREP
 CPPFLAGS+= -DDOUBLEREP
@@ -68,8 +69,8 @@ CPPFLAGSDEBUG += -DDOUBLEREP
 LDFLAGSDEBUG +=  -DDOUBLEREP
 endif
 
-test: all tests
-	+cd tests && make -k 
+#test: all tests
+#	+cd tests && make -k 
 
 debug:  $(DEBUGLIB) $(DEBUGEXEC)
 
