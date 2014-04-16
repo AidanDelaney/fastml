@@ -15,5 +15,5 @@
 # We need to do this horrible stuff as the fastml install target
 # doesn't do a system install.
 override_dh_auto_install:
-	mkdir -p $$(pwd)/debian/usr/bin
-	cp programs/fastml/fastml $$(pwd)/debian/usr/bin
+	mkdir -p $$(pwd)/debian/fastml/usr/bin
+	install programs/fastml/fastml $$(pwd)/debian/fastml/usr/bin
