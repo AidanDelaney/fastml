@@ -3,9 +3,11 @@
 # this split is vital becouse of a bug in make 3.80.1 - see 
 # http://www.cygwin.com/ml/cygwin/2004-09/msg01659.html
 
-PROGRAMS1= fastml gainLoss
-PROGRAMS2= indelCoder
-PROGRAMS = $(PROGRAMS1) $(PROGRAMS2)
+PROGRAMS1= fastml
+# Do not build gainLoss or indelCoder
+#gainLoss
+#PROGRAMS2= indelCoder
+PROGRAMS = $(PROGRAMS1)
 
 # all has to be the FIRST task!
 TASKS= all clean depend debug All install doubleRep
